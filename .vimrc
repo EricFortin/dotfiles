@@ -20,7 +20,8 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'fholgado/minibufexpl.vim'
 "NeoBundle 'ervandew/supertab'
-"NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'moll/vim-bbye'
 
 " vim-scripts repos
 NeoBundle 'minibufexpl.vim'
@@ -65,4 +66,12 @@ set expandtab
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
-let g:miniBufExplModSelTarget = 1 
+let g:miniBufExplModSelTarget = 1
+
+" NerdTree
+map <C-n> :NERDTreeToggle<cr>
+
+" BBye
+cnoremap <expr> bd (getcmdtype() == ':' ? 'Bdelete' : 'bd')
+
+
