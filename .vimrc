@@ -19,9 +19,11 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 " GitHub repos
 "NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'fholgado/minibufexpl.vim'
-"NeoBundle 'ervandew/supertab'
+NeoBundle 'ervandew/supertab'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'moll/vim-bbye'
+NeoBundle 'msanders/snipmate.vim'
+
 
 " vim-scripts repos
 NeoBundle 'minibufexpl.vim'
@@ -70,6 +72,9 @@ let g:miniBufExplModSelTarget = 1
 
 " NerdTree
 map <C-n> :NERDTreeToggle<cr>
+
+" Close if only buffer left is NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " BBye
 cnoremap <expr> bd (getcmdtype() == ':' ? 'Bdelete' : 'bd')
