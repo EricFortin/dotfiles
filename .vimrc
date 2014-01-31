@@ -1,4 +1,4 @@
-"" Eric Fortin's vimrc file.
+" Eric Fortin's vimrc file.
 
 if has('vim_starting')
     set nocompatible            " No Vi compatibility mode. Need to be first.
@@ -50,6 +50,11 @@ set number                      " Display line numbers
 set incsearch                   " Incremental search
 set hlsearch                    " Highlight search
 
+if has("gui_running")
+    " Maximize window
+    set lines=999 columns=999
+endif
+
 " Formatting
 
 set autoindent
@@ -62,21 +67,32 @@ set expandtab
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Plugin config
+" Plugins config
 
 " MiniBufExpl
 let g:miniBufExplMapWindowNavVim = 1 
 let g:miniBufExplMapWindowNavArrows = 1 
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1
+"""""""""""""""""""""""""""""""""""""""""""
 
 " NerdTree
 map <C-n> :NERDTreeToggle<cr>
+let NERDTreeShowBookmarks=1
+let NERDTreeIgnore = ['\.lo$', '\.o', '\.pyc']
+
+" open on startup.
+autocmd VimEnter * NERDTree 
+
+" Move cursor to main window
+autocmd VimEnter * wincmd p
 
 " Close if only buffer left is NerdTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+"""""""""""""""""""""""""""""""""""""""""""
 
 " BBye
 cnoremap <expr> bd (getcmdtype() == ':' ? 'Bdelete' : 'bd')
+"""""""""""""""""""""""""""""""""""""""""""
 
 
