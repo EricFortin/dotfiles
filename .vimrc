@@ -20,10 +20,13 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 "NeoBundle 'tpope/vim-fugitive'
 "NeoBundle 'fholgado/minibufexpl.vim'
 NeoBundle 'ervandew/supertab'
-NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'scrooloose/nerdtree' 
 NeoBundle 'moll/vim-bbye'
-NeoBundle 'msanders/snipmate.vim'
 
+NeoBundle 'MarcWeber/vim-addon-mw-utils' " Required fir vim-snipmate
+NeoBundle 'tomtom/tlib_vim' " Required fir vim-snipmate
+NeoBundle 'garbas/vim-snipmate'
+NeoBundle 'honza/vim-snippets' " Collection of snippets.
 
 " vim-scripts repos
 NeoBundle 'minibufexpl.vim'
