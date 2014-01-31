@@ -28,10 +28,10 @@ NeoBundle 'tomtom/tlib_vim' " Required fir vim-snipmate
 NeoBundle 'garbas/vim-snipmate'
 NeoBundle 'honza/vim-snippets' " Collection of snippets.
 
+NeoBundle 'kien/ctrlp.vim'
+
 " vim-scripts repos
 NeoBundle 'minibufexpl.vim'
-"NeoBundle 'L9'
-"NeoBundle 'FuzzyFinder'
 
 " Non GitHub repos
 "NeoBundle 'git://git.wincent.com/command-t.git'
@@ -52,6 +52,7 @@ colorscheme evening
 set number                      " Display line numbers
 set incsearch                   " Incremental search
 set hlsearch                    " Highlight search
+set showmatch
 
 if has("gui_running")
     " Maximize window
@@ -66,6 +67,13 @@ set softtabstop=4
 set shiftwidth=4
 set shiftround
 set expandtab
+
+" Remaps
+let mapleader=','
+
+" Misc
+set nobackup
+set noswapfile
 
 
 
@@ -98,4 +106,6 @@ autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTree
 cnoremap <expr> bd (getcmdtype() == ':' ? 'Bdelete' : 'bd')
 """""""""""""""""""""""""""""""""""""""""""
 
-
+" CtrlP
+let g:ctrlp_working_path_mode='ra'
+"""""""""""""""""""""""""""""""""""""""""""
