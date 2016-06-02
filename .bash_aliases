@@ -18,3 +18,6 @@ alias mkdir='mkdir -p'
 alias cls=clear
 
 alias apt-get='sudo apt-get'
+
+# Docker
+alias compose='docker-compose'
