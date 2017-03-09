@@ -19,5 +19,8 @@ alias cls=clear
 
 alias apt-get='sudo apt-get'
 
+alias envgrep='env | grep'
+alias psgrep='ps -elf | grep'
+
 # Docker
 alias compose='docker-compose'
