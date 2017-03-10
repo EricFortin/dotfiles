@@ -14,6 +14,7 @@ alias ....='cd ../../..'
 
 alias mkdir='mkdir -p'
 
+alias resrc='source ~/.bashrc'
 
 alias cls=clear
 
