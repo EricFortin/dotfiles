@@ -4,4 +4,4 @@
 export HISTSIZE=50000000;
 export HISTFILESIZE=$HISTSIZE;
 export HISTCONTROL=ignoredups;
-export HISTIGNORE=" *:ls:cd:cd -:pwd:exit:date:* --help:* -h:pony:pony add *:pony update *:pony save *:pony ls:pony ls *";
+export HISTIGNORE=" *:ls:cd:pwd:exit:date:* --help:* -h:pony:pony add *:ls *:cd *:clear:cls:ll:la:lt:ld";
