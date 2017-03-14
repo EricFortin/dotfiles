@@ -2,7 +2,7 @@
 
 # Heavily inspired by jessfraz
 
-for file in ~/.{bash_prompt,bash_aliases,bash_exports}; do
+for file in ~/.{bash_prompt,bash_aliases,bash_exports,bash_proxy,bash_local}; do
 	if [[ -r "$file" ]] && [[ -f "$file" ]]; then
 		source "$file"
 	fi
