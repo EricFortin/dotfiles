@@ -1,9 +1,10 @@
 #!/bin/bash
 
 # Setup links in $HOME for dotfiles.
+CURDIR=$(dirname $0)
 
 # add aliases for dotfiles
-for file in $(find $PWD -name ".*" -not -name "." -not -name ".gitignore" -not -name ".travis.yml" -not -name ".git" -not -name ".*.swp" -not -name ".travis.yml" -not -name ".irssi" -not -name ".gnupg"); do
+for file in $(find $CURDIR -name ".*" -not -name "." -not -name ".gitignore" -not -name ".travis.yml" -not -name ".git" -not -name ".*.swp" -not -name ".travis.yml" -not -name ".irssi" -not -name ".gnupg"); do
     f=$(basename $file);
     ln -sfn $file $HOME/$f;
 done;
