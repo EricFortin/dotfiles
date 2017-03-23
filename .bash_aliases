@@ -12,6 +12,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
+alias h='history'
+
 alias mkdir='mkdir -p'
 
 alias resrc='source ~/.bashrc'
@@ -22,6 +24,7 @@ alias apt-get='sudo apt-get'
 
 alias envgrep='env | grep'
 alias psgrep='ps -elf | grep'
+alias hgrep='history | grep'
 
 # Docker
 alias compose='docker-compose'
