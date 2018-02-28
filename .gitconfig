@@ -1,8 +1,15 @@
+[core]
+	editor = vi
+
 [alias]
 	s = status -s
 	l = log --color --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit -n 20
 	ll = log --color --decorate --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	st = status
+
+	unstage = reset HEAD --
+
+	co = checkout
 [user]
 	name = Eric Fortin
 	email = eric.fortin2@gmail.com
