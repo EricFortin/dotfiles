@@ -13,3 +13,6 @@
 [user]
 	name = Eric Fortin
 	email = eric.fortin2@gmail.com
+
+[include]
+    path = .gitconfig.local
