@@ -28,3 +28,8 @@ alias hgrep='history | grep'
 
 # Docker
 alias compose='docker-compose'
+
+# Kubernetes
+alias k='kubectl'
+alias kctx='kubectx'
+alias kns='kubens'
