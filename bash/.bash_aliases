@@ -1,10 +1,18 @@
 
 # dir listing
-alias l='ls -CF'
-alias ll='ls -lhF'
-alias la='ls -lAhF'
-alias lt='ls -lthF'
-alias ld='ls -ldhF'
+if command -v eza > /dev/null 2>&1; then
+  # Use eza for enhanced navigation
+  alias l='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first'
+  alias ll='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -l --git -h'
+  alias la='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a'
+  alias lla='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a -l --git -h'
+else
+  # Fallbacl to standard ls aliases
+  alias l='ls -CF'
+  alias ll='ls -lhF'
+  alias la='ls -lAhF'
+  alias lla='la'
+fi
 
 
 # Directory traversal
