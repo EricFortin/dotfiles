@@ -95,7 +95,8 @@ if ! shopt -oq posix; then
 fi
 
 # Check if we are running on omarchy and then load our customizations.
-if [ -f "${HOME}/.local/share/omarchy/default/bash/rc/.bashrc" ]; then
+if [ -f "${HOME}/.local/share/omarchy/default/bash/rc" ]; then
+  echo "Sourcing omarchy default"
   source "${HOME}/.local/share/omarchy/default/bash/rc"
 fi
 
