@@ -1,13 +1,8 @@
 #!/bin/bash
 
-# Setup links in $HOME for dotfiles.
-CURDIR=$(dirname $0)
-
-# add aliases for dotfiles
-for file in $(find $CURDIR -name ".*" -not -name "." -not -name ".gitignore" -not -name ".travis.yml" -not -name ".git" -not -name ".*.swp" -not -name ".travis.yml" -not -name ".irssi" -not -name ".gnupg"); do
-    f=$(basename $file);
-    ln -sfn $file $HOME/$f;
-done;
-#ln -sfn $(CURDIR)/.gnupg/gpg.conf $(HOME)/.gnupg/gpg.conf;
-#ln -sfn $(CURDIR)/.gnupg/gpg-agent.conf $(HOME)/.gnupg/gpg-agent.conf;
-#ln -fn $(CURDIR)/gitignore $(HOME)/.gitignore;
+# Clone theme for tmux
+NORD_DIR=~/.config/tmux/plugins/nordtheme
+if [ ! -d "$NORD_DIR" ]; then
+  mkdir -p $NORD_DIR
+  git clone https://github.com/nordtheme/tmux.git $NORD_DIR/tmux
+fi
