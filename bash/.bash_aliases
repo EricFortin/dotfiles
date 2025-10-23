@@ -2,12 +2,16 @@
 # dir listing
 if command -v eza > /dev/null 2>&1; then
   # Use eza for enhanced navigation
-  alias l='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first'
-  alias ll='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -l --git -h'
-  alias la='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a'
-  alias lla='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a -l --git -h'
+  alias ls='eza --color-scale=all --color-scale-mode=gradient --group-directories-first --icons=auto'
+  alias l='ls'
+  alias ll='ls -l --git -h'
+  alias la='ls -a'
+  alias lla='ls -a -l --git -h'
+  alias lt='eza --tree --level=2 --long --icons --git'
+  alias lta='lt -a'
 else
-  # Fallbacl to standard ls aliases
+  # Fallback to standard ls aliases
+  alias ls='ls --color=auto'
   alias l='ls -CF'
   alias ll='ls -lhF'
   alias la='ls -lAhF'
@@ -29,6 +33,10 @@ alias resrc='source ~/.bashrc'
 alias cls=clear
 
 alias apt-get='sudo apt-get'
+
+alias grep='grep --color=auto'
+alias grep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
 
 alias envgrep='env | grep'
 alias psgrep='ps -elf | grep'
