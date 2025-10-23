@@ -24,7 +24,8 @@ alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 
-alias h='history'
+alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
+
 
 alias mkdir='mkdir -p'
 
