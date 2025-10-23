@@ -7,7 +7,7 @@ if command -v eza > /dev/null 2>&1; then
   alias ll='ls -l --git -h'
   alias la='ls -a'
   alias lla='ls -a -l --git -h'
-  alias lt='eza --tree --level=2 --long --icons --git'
+  alias lt='eza --tree --level=2 --color-scale=all --color-scale-mode=gradient --long --icons --git'
   alias lta='lt -a'
 else
   # Fallback to standard ls aliases
