@@ -35,7 +35,6 @@ alias cls=clear
 alias apt-get='sudo apt-get'
 
 alias grep='grep --color=auto'
-alias grep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
 
 alias envgrep='env | grep'
