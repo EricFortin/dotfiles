@@ -2,11 +2,14 @@
 
 function install_ubuntu() {
   apt-get install bat fzf ripgrep
+  ln -s /usr/bin/batcat ~/bin/bat
 }
 
 function install_arch() {
   echo "ARCH BTW"
 }
+
+mkdir -p ~/bin
 
 if grep -q "ID=ubuntu" /etc/os-release; then
   install_ubuntu
