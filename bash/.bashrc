@@ -12,3 +12,6 @@ if [ -f "${HOME}/.local/share/omarchy/default/bash/rc" ]; then
 fi
 
 source "${HOME}/.config/bash/rc"
+if [ -f "${HOME}/.config/bach_local/rc" ]; then
+  source "${HOME}/.config/bash_local/rc"
+fi
