@@ -40,7 +40,7 @@ style_root = "bg:color_gray fg:color_red"
 [hostname]
 ssh_only = false
 style = "fg:color_fg0 bg:color_gray"
-format = '[$hostname$ssh_symbol:]($style)'
+format = '[$hostname$ssh_symbol]($style)'
 ssh_symbol = '🌐'
 
 [directory]
@@ -51,7 +51,7 @@ truncation_length = 8
 
 [git_branch]
 style = "fg:color_fg0 bg:color_green_dark1"
-format = '[ $symbol$branch(:$remote_branch)]($style)'
+format = '[ $symbol$branch(:$remote_branch) ]($style)'
 
 [git_commit]
 style = "fg:color_fg0 bg:color_green_dark1"
@@ -62,3 +62,10 @@ style = "fg:color_fg0 bg:color_green_dark1"
 [git_status]
 style = "fg:color_fg0 bg:color_green_dark1"
 format = '([\[$all_status$ahead_behind\]]($style))'
+
+[fill]
+symbol = ' '
+
+[python]
+style = "fg:color_fg0 bg:color_gray"
+format = '[](color_gray)[\(${virtualenv}\)]($style)[](fg:color_gray)'
