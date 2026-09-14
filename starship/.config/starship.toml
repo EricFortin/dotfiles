@@ -1,26 +1,64 @@
 format = """
+[](color_gray)\
 $username\
 $hostname\
+[](bg:color_gray_light fg:color_gray)\
 $directory\
+[](fg:color_gray_light bg:color_green_dark1)\
 $git_branch\
 $git_commit\
 $git_state\
 $git_status\
+[ ](fg:color_green_dark1)\
+$fill\
 $python\
 $line_break\
 $character"""
 
 add_newline = false
 
+palette = 'nord_custom_dark'
+
+[palettes.nord_custom_dark]
+color_fg0 = '#ffffff'
+color_bg1 = '#3d5470'
+color_bg3 = '#4a6287'
+color_green_dark = '#6d8f8e'
+color_green_dark1 = '#638d99'
+color_green = '#98971a'
+color_gray = '#3d5470'
+color_purple = '#b16286'
+color_red = '#cc241d'
+color_gray_light = '#556a80'
+
 [username]
-format = '[$user]($style)@'
-style_user = 'bold blue'
+show_always = true
+format = '[$user@]($style)'
+style_user = "bg:color_gray fg:color_fg0"
+style_root = "bg:color_gray fg:color_red"
 
 [hostname]
-format = '[$hostname$ssh_symbol]($style):'
+ssh_only = false
+style = "fg:color_fg0 bg:color_gray"
+format = '[$hostname$ssh_symbol:]($style)'
 ssh_symbol = '🌐'
 
 [directory]
+style = "fg:color_fg0 bg:color_gray_light"
+format = '[$path]($style)[$read_only]($read_only_style)'
 truncate_to_repo = false
 truncation_length = 8
 
+[git_branch]
+style = "fg:color_fg0 bg:color_green_dark1"
+format = '[ $symbol$branch(:$remote_branch)]($style)'
+
+[git_commit]
+style = "fg:color_fg0 bg:color_green_dark1"
+
+[git_state]
+style = "fg:color_fg0 bg:color_green_dark1"
+
+[git_status]
+style = "fg:color_fg0 bg:color_green_dark1"
+format = '([\[$all_status$ahead_behind\]]($style))'
