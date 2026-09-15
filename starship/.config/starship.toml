@@ -54,9 +54,11 @@ style = "fg:color_fg0 bg:color_green_dark1"
 format = '[ $symbol$branch(:$remote_branch) ]($style)'
 
 [git_commit]
+format = '[\($hash$tag\) ]($style)'
 style = "fg:color_fg0 bg:color_green_dark1"
 
 [git_state]
+format = '[\($state( $progress_current/$progress_total)\) ]($style)'
 style = "fg:color_fg0 bg:color_green_dark1"
 
 [git_status]
